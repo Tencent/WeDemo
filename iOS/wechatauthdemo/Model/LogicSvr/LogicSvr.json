@@ -1,0 +1,201 @@
+{
+    "LoginResp" : {
+        "base_resp" : {
+            "errcode" : 20001,
+            "errmsg" : "1234"
+        },
+        "uin" : 1439553750,
+        "login_ticket" : "95758920"
+    },
+    
+    "ConnectResp" : {
+        "base_resp" : {
+            "errcode" : 20001,
+            "errmsg" : "1234"
+        },
+        "temp_uin" : 1439553750
+    },
+    
+    "WXLoginResp" : {
+        "base_resp" : {
+            "errcode" : 20001,
+            "errmsg" : "1234"
+        },
+        "uin" : 1439553750,
+        "login_ticket" : "95758920",
+        "has_bind_app" : true
+    },
+    
+    "WXBindAPPResp" : {
+        "base_resp" : {
+            "errcode" : 20001,
+            "errmsg" : "1234"
+        },
+        "uin" : 1439553750,
+        "login_ticket" : "95758920"
+    },
+    
+    "GetUserInfoResp" : {
+        "mail" : "123",
+        "openid" : "",
+        "nickname" : "",
+        "base_resp" : {
+            "errcode" : 20001,
+            "errmsg" : "1234"
+        },
+        "unionid" : "",
+        "sex":1,
+        "refresh_token_expire_time" : 12345,
+        "access_token_expire_time" : 12345,
+        "access_log" : [
+                        {
+                        "login_time" : 12345
+                        },
+                        {
+                        "login_time" : 12345
+                        }
+                        ],
+        "headimgurl": "1234"
+    },
+    
+    "APPBindWXResp" : {
+        "base_resp" : {
+            "errcode" : 20001,
+            "errmsg" : "1234"
+        },
+        "uin" : 1439553750,
+        "login_ticket" : "95758920"
+    },
+    
+    "RegisterResp" : {
+        "base_resp" : {
+            "errcode" : 20001,
+            "errmsg" : "1234"
+        },
+        "uin" : 1439553750,
+        "login_ticket" : "95758920"
+    },
+    
+    "CheckLoginResp" : {
+        "base_resp" : {
+            "errcode" : 20001,
+            "errmsg" : "1234"
+        },
+        "session_key" : "123456"
+    },
+    
+    "GetCommentListResp": {
+        "base_resp": {
+            "errcode": 20001,
+            "errmsg": "1234"
+        },
+        "perpage": 10,
+        "comment_count": 25,
+        "comment_list": [{
+                         "id": "string",
+                         "content": "string",
+                         "date": 123456,
+                         "user": {
+                            "openid": "string",
+                            "nickname": "string",
+                            "sex": 1,
+                            "city": "string",
+                            "country": "string",
+                            "headimgurl": "string"
+                         },
+                         "reply_count": 3,
+                         "reply_list": [{
+                                        "id": "string",
+                                        "content": "string",
+                                        "date": 123456,
+                                        "reply_to_id": "string",
+                                        "user": {
+                                            "openid": "string",
+                                            "nickname": "string",
+                                            "sex": 1,
+                                            "city": "string",
+                                            "country": "string",
+                                            "headimgurl": "string"
+                                        }
+                         }]
+                         
+        }]
+    },
+    
+    "GetReplyListResp": {
+        "base_resp": {
+            "errcode": 20001,
+            "errmsg": "1234"
+        },
+        "reply_list": [{
+                       "id": "string",
+                       "content": "string",
+                       "date": 123456,
+                       "reply_to_id": "string",
+                       "user": {
+                       "openid": "string",
+                       "nickname": "string",
+                       "sex": 1,
+                       "city": "string",
+                       "country": "string",
+                       "headimgurl": "string"
+                       }
+                }]
+    },
+    
+    "AddCommentResp": {
+        "base_resp": {
+            "errcode": 20001,
+            "errmsg": "1234"
+        },
+        "comment": {
+            "id": "string",
+            "content": "string",
+            "date": 123456,
+            "user": {
+                "openid": "string",
+                "nickname": "string",
+                "sex": 1,
+                "city": "string",
+                "country": "string",
+                "headimgurl": "string"
+            },
+            "reply_count": 3,
+            "reply_list": [{
+                           "id": "string",
+                           "content": "string",
+                           "date": 123456,
+                           "reply_to_id": "string",
+                           "user": {
+                           "openid": "string",
+                           "nickname": "string",
+                           "sex": 1,
+                           "city": "string",
+                           "country": "string",
+                           "headimgurl": "string"
+                           }
+                           }]
+        }
+    },
+    
+    "AddReplyResp": {
+        "base_resp": {
+            "errcode": 20001,
+            "errmsg": "1234"
+        },
+        "reply": {
+            "id": "string",
+            "content": "string",
+            "date": 123456,
+            "reply_to_id": "string",
+            "user": {
+                "openid": "string",
+                "nickname": "string",
+                "sex": 1,
+                "city": "string",
+                "country": "string",
+                "headimgurl": "string"
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "base_resp" : {
+        "errcode" : 20001,
+        "errmsg" : "1234"
+    },
+    "access_log" : [
+                    {
+                    "login_time" : 12345,
+                    "login_type" : 1
+                    },
+                    {
+                    "login_time" : 12345,
+                    "login_type" : 1
+                    }
+                    ],
+    "network_config_item": {
+        "cgi_name": "12345",
+        "request_path": "12345",
+        "http_method": "PUT",
+        "encrypt_algorithm": 1,
+        "decrypt_algorithm": 1,
+        "encrypt_key_path": "123456",
+        "decrypt_key_path": "123456",
+        "sys_err_key_path": "123456"
+    },
+    "resp_object": {
+        "errcode": -1,
+        "resp_buffer": "buffer"
+    }
+}

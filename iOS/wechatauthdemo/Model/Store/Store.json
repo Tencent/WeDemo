@@ -1,0 +1,14 @@
+{
+    "UserInfo" : {
+        "uin" : 123456,
+        "mail" : "123456",
+        "pwd_h1" : "123456",
+        "nickname" : "123456",
+        "openid" : "123456",
+        "login_ticket" : "123456",
+        "unionid" : "123456",
+        "auth_code": "123456",
+        "headimgurl": "1234"
+        "sex": 1
+    }
+}

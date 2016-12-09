@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="UserHeadPhotoCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jnu-HG-AKe">
+                        <rect key="frame" x="239" y="8" width="55" height="55"/>
+                        <animations/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="头像" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKI-dV-ce3">
+                        <rect key="frame" x="16" y="8" width="215" height="55"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="215" id="kv4-YW-O7B"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="OKI-dV-ce3" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="4cU-A0-Je6"/>
+                    <constraint firstItem="Jnu-HG-AKe" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="5KU-ia-wOC"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Jnu-HG-AKe" secondAttribute="trailing" constant="18" id="EJz-oR-vh1"/>
+                    <constraint firstItem="OKI-dV-ce3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="O7B-L4-skR"/>
+                    <constraint firstItem="Jnu-HG-AKe" firstAttribute="leading" secondItem="OKI-dV-ce3" secondAttribute="trailing" constant="8" id="Pz6-5g-fHx"/>
+                    <constraint firstItem="Jnu-HG-AKe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="Ydd-CE-HZ2"/>
+                    <constraint firstItem="Jnu-HG-AKe" firstAttribute="leading" secondItem="OKI-dV-ce3" secondAttribute="trailing" constant="8" id="heB-pA-ZTs"/>
+                    <constraint firstItem="OKI-dV-ce3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="i6X-hD-Nhd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="headPhoto" destination="Jnu-HG-AKe" id="jaT-7C-OFO"/>
+                <outlet property="titleLabel" destination="OKI-dV-ce3" id="dfy-mb-fl5"/>
+            </connections>
+            <point key="canvasLocation" x="98" y="298"/>
+        </tableViewCell>
+    </objects>
+</document>

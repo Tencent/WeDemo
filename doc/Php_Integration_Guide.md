@@ -55,7 +55,7 @@ vim config.php
 
 ###3.2 修改AppID和AppSecret
 
-![步骤图：修改AppId和AppSecret](https://raw.githubusercontent.com/Tencent/WeDemo/master/doc/image/config_step1.jpg)
+![步骤图：修改AppId和AppSecret](https://raw.githubusercontent.com/weixin-open/WeChatAuthDemo/master/doc/image/config_step1.jpg)
 
 请先参照上图，再按以下步骤操作：
 
@@ -66,13 +66,13 @@ vim config.php
 
 ###3.3 修改SDK路径
 
-![步骤图：修改SDK路径](https://raw.githubusercontent.com/Tencent/WeDemo/master/doc/image/config_step2.jpg)
+![步骤图：修改SDK路径](https://raw.githubusercontent.com/weixin-open/WeChatAuthDemo/master/doc/image/config_step2.jpg)
 
 把demo clone下来后可直接使用默认的SDK路径，如需要改变SDK路径，可将第13行`define('WX_AUTH_SDK_PATH', __DIR__ . '/../sdk/');`的`'/../sdk/'`修改为新的SDK路径。
 
 ###3.4 修改Database路径
 
-![步骤图：修改Database路径](https://raw.githubusercontent.com/Tencent/WeDemo/master/doc/image/config_step3.jpg)
+![步骤图：修改Database路径](https://raw.githubusercontent.com/weixin-open/WeChatAuthDemo/master/doc/image/config_step3.jpg)
 
 该demo使用文件存储的方式来作为Database，如果开发者想沿用这种方式，可按照以下步骤操作：
 
@@ -97,7 +97,7 @@ chmod 744 YourDatabaseDir
 
 **注意，我们这里强烈建议使用2048位以上的钥匙对，具体生成密钥指南详见**[WeChatAuthDemo生成密钥与自签名证书指南](https://github.com/Tencent/WeDemo/wiki/WeChatAuthDemo生成密钥与自签名证书指南)
 
-![步骤图：修改RSA密钥路径及文件名](https://raw.githubusercontent.com/Tencent/WeDemo/master/doc/image/config_step4.jpg)
+![步骤图：修改RSA密钥路径及文件名](https://raw.githubusercontent.com/weixin-open/WeChatAuthDemo/master/doc/image/config_step4.jpg)
 
 * 生成了私钥文件`rsa_private.key`和公钥文件`rsa_public.key`后将文件移动到开发者自定义的密钥目录（这里暂时使用`YourRSADir`来代替），目录的生成过程可参照[3.4 修改Database路径](#user-content-34-修改database路径)的终端代码；
 * 开发者可以重命名私钥文件`rsa_private.key`，这里暂时使用`YourRSAPrivate.key`来代替；
@@ -105,7 +105,7 @@ chmod 744 YourDatabaseDir
 
 ###3.6 修改加密登陆票据（token、密码等）的盐（salt）
 
-![步骤图：修改加密登陆票据（token、密码等）的盐（salt）](https://raw.githubusercontent.com/Tencent/WeDemo/master/doc/image/config_step5.jpg)
+![步骤图：修改加密登陆票据（token、密码等）的盐（salt）](https://raw.githubusercontent.com/weixin-open/WeChatAuthDemo/master/doc/image/config_step5.jpg)
 
 **为避免暴力破解，建议开发者不要使用默认值！**
 
@@ -113,7 +113,7 @@ chmod 744 YourDatabaseDir
 
 ###3.7 修改票据相关时间和第三方业务相关错误码（可选）
 
-![步骤图：修改票据相关时间和第三方业务相关错误码（可选）](https://raw.githubusercontent.com/Tencent/WeDemo/master/doc/image/config_step6.jpg)
+![步骤图：修改票据相关时间和第三方业务相关错误码（可选）](https://raw.githubusercontent.com/weixin-open/WeChatAuthDemo/master/doc/image/config_step6.jpg)
 
 **该步骤为可选步骤，请开发者根据自己的实际情况进行修改。**
 

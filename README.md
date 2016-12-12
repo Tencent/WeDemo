@@ -1,6 +1,6 @@
-#WeChat AuthSDK Demo App
+#WeDemo App
 
-微信登录Demo为微信团队开源项目，用于微信开发者进行微信登录、分享功能开发时的参考Demo。微信开发者可以参考项目中的代码来开发应用，也可以直接使用项目中的代码到自己的App中。
+WeDemo为微信团队开源项目，用于微信开发者进行微信登录、分享功能开发时的参考Demo。微信开发者可以参考项目中的代码来开发应用，也可以直接使用项目中的代码到自己的App中。
 
 开发者可以自由使用并传播本代码，但需要保留原作者信息。
 
@@ -10,16 +10,16 @@
 
 详见Wiki：
 
-* [微信AuthDemoApp交互时序说明文档](https://github.com/Tencent/WeDemo/wiki/微信Auth-Demo-App交互时序说明文档)
+* [WeDemo App交互时序说明文档](https://github.com/Tencent/WeDemo/wiki/WeDemo-App交互时序说明文档)
 
-* [WeChatAuthDemo客户端接入指南](https://github.com/Tencent/WeDemo/wiki/WeChatAuthDemo客户端接入指南)
+* [WeDemo客户端接入指南](https://github.com/Tencent/WeDemo/wiki/WeDemo客户端接入指南)
 
-* [WeChatAuthDemo生成密钥与自签名证书指南](https://github.com/Tencent/WeDemo/wiki/WeChatAuthDemo生成密钥与自签名证书指南)
+* [WeDemo生成密钥与自签名证书指南](https://github.com/Tencent/WeDemo/wiki/WeDemo生成密钥与自签名证书指南)
 
-* [WeChatAuthDemo后台（PHP）接入指南](https://github.com/Tencent/WeDemo/wiki/WeChatAuthDemo后台（PHP）接入指南)
+* [WeDemo后台（PHP）接入指南](https://github.com/Tencent/WeDemo/wiki/WeDemo后台（PHP）接入指南)
 
 ##License
-Copyright (c) 2015 Tencent
+Copyright (c) 2016 Tencent
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

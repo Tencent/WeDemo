@@ -1,4 +1,4 @@
-<h1 align=center>微信Auth Demo App交互时序说明文档</center></h1>
+<h1 align=center>WeDemo App交互时序说明文档</center></h1>
 
 ##目录
 *   [一、建立登录前安全信道](#wow1)

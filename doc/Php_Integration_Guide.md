@@ -1,4 +1,4 @@
-<h1 align='center'>WeChatAuthDemo后台（PHP）接入指南</h1>
+<h1 align='center'> WeDemo后台（PHP）接入指南</h1>
 
 ##目录
 
@@ -19,7 +19,7 @@
 
 ##1. 概要
 
-WeChatAuthDemo除了具有演示客户端，服务器如何安全的接入微信服务的作用，还提供了一套[安全的通信方式](https://github.com/Tencent/WeDemo/wiki/微信Auth-Demo-App交互时序说明文档)供开发者使用以快速搭建自己的App。本文为PHP端接入指南，客户端接入指南详见[WeChatAuthDemo客户端接入指南](https://github.com/weixin-open/WeChatAuthDemo/wiki/WeChatAuthDemo客户端接入指南)。
+WeDemo除了具有演示客户端，服务器如何安全的接入微信服务的作用，还提供了一套[安全的通信方式](https://github.com/Tencent/WeDemo/wiki/微信Auth-Demo-App交互时序说明文档)供开发者使用以快速搭建自己的App。本文为PHP端接入指南，客户端接入指南详见[WeDemo客户端接入指南](https://github.com/weixin-open/WeChatAuthDemo/wiki/WeChatAuthDemo客户端接入指南)。
 
 ##2. 获取源代码
 
@@ -95,7 +95,7 @@ chmod 744 YourDatabaseDir
 
 ###3.5 修改RSA密钥路径及文件名
 
-**注意，我们这里强烈建议使用2048位以上的钥匙对，具体生成密钥指南详见**[WeChatAuthDemo生成密钥与自签名证书指南](https://github.com/Tencent/WeDemo/wiki/WeChatAuthDemo生成密钥与自签名证书指南)
+**注意，我们这里强烈建议使用2048位以上的钥匙对，具体生成密钥指南详见**[WeDemo生成密钥与自签名证书指南](https://github.com/Tencent/WeDemo/wiki/WeChatAuthDemo生成密钥与自签名证书指南)
 
 ![步骤图：修改RSA密钥路径及文件名](https://raw.githubusercontent.com/weixin-open/WeChatAuthDemo/master/doc/image/config_step4.jpg)
 
@@ -119,7 +119,7 @@ chmod 744 YourDatabaseDir
 
 ##4. 编写新的功能
 
-开发者可以在WeChatAuthDemo的基础上添加新的功能，完善服务端功能。
+开发者可以在WeDemo的基础上添加新的功能，完善服务端功能。
 
 ###4.1 编写新的action
 

@@ -1,4 +1,4 @@
-<h1 align='center'>WeChatAuthDemo客户端接入指南</h1>
+<h1 align='center'>WeDemo客户端接入指南</h1>
 
 ##目录
 
@@ -15,7 +15,7 @@
 	* [编写你自己的Engine]()
 
 ##概要
-WeChatAuthDemo除了具有演示客户端，服务器如何安全的接入微信服务的作用，还提供了一套[安全的通信方式](https://github.com/Tencent/WeDemo/wiki/微信Auth-Demo-App交互时序说明文档)供开发者使用以快速搭建自己的App。本文为客户端接入指南，PHP端接入指南详见[WeChatAuthDemo后台（PHP）接入指南]()。
+WeDemo除了具有演示客户端，服务器如何安全的接入微信服务的作用，还提供了一套[安全的通信方式](https://github.com/Tencent/WeDemo/wiki/微信WeDemo交互时序说明文档)供开发者使用以快速搭建自己的App。本文为客户端接入指南，PHP端接入指南详见[WeChatAuthDemo后台（PHP）接入指南]()。
 
 ##获取源代码
 在Mac OS X上打开终端模拟器，输入以下命令：
@@ -67,14 +67,14 @@ open .
 
 ![](https://raw.githubusercontent.com/weixin-open/WeChatAuthDemo/master/doc/image/RSAPublicKey.jpg)
 
-**注意，我们这里强烈建议使用2048位以上的钥匙对，具体生成密钥指南详见[WeChatAuthDemo生成RSA钥匙对与自签名证书指南](https://github.com/Tencent/WeDemo/wiki/WeChatAuthDemo生成密钥与自签名证书指南)**。
+**注意，我们这里强烈建议使用2048位以上的钥匙对，具体生成密钥指南详见[WeDemo生成RSA钥匙对与自签名证书指南](https://github.com/Tencent/WeDemo/wiki/WeDemo生成密钥与自签名证书指南)**。
 
 接下来将原来的工程的Bundle Resource中的SSL证书替换成你自己的自签名证书，如下图所示：
 
 ![](https://raw.githubusercontent.com/weixin-open/WeChatAuthDemo/master/doc/image/serverCer.jpg)
 
 ##编写新的功能
-你可以在WeChatAuthDemo的基础上添加你自己的功能，完成你的App。
+你可以在WeDemo的基础上添加你自己的功能，完成你的App。
 
 ###增加CGI配置
 按照[ConfigItemsMaker.h](https://github.com/Tencent/WeDemo/blob/master/iOS/wechatauthdemo/Service/ConfigItemsMaker.h)的格式，增加你需要增加的CGI的配置信息，包括请求的路径，加解密算法等，参考示例如下(在[ConfigItemsMaker.h](https://github.com/Tencent/WeDemo/blob/master/iOS/wechatauthdemo/Service/ConfigItemsMaker.h))：
@@ -116,7 +116,7 @@ open .
 
 ###调试
 
-WeChatAuthDemo在Debug模式下还在首页提供了一个可以修改CGI配置的调试页面，同时还在App全局提供摇一摇手势呼出日志窗口，你还可以在他们上面集成其它调试工具如[FLEX](https://github.com/Flipboard/FLEX)等, enjoy! **:-)**。
+WeDemo在Debug模式下还在首页提供了一个可以修改CGI配置的调试页面，同时还在App全局提供摇一摇手势呼出日志窗口，你还可以在他们上面集成其它调试工具如[FLEX](https://github.com/Flipboard/FLEX)等, enjoy! **:-)**。
 
 ![](https://raw.githubusercontent.com/weixin-open/WeChatAuthDemo/master/doc/image/Index.jpg)|![](https://raw.githubusercontent.com/weixin-open/WeChatAuthDemo/master/doc/image/Debug.jpg)
 -------|-------

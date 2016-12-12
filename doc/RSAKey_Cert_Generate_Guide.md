@@ -1,4 +1,4 @@
-<h1 align='center'>WeChatAuthDemo生成密钥与自签名证书指南</h1>
+<h1 align='center'> WeDemo生成密钥与自签名证书指南</h1>
 
 ##目录
 

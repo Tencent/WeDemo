@@ -8,8 +8,4 @@
 
 @implementation MessageboardFooterView
 
-- (void)awakeFromNib {
-    // Initialization code
-}
-
 @end

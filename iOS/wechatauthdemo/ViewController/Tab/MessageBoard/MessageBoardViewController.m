@@ -177,7 +177,7 @@ UITextFieldDelegate, NewCommentViewControllerDelegate>
 #pragma mark - Notification
 // Called when the UIKeyboardDidShowNotification is sent.
 - (void)keyboardWasShown:(NSNotification*)aNotification {
-    AppDelegate *delegate = [UIApplication sharedApplication].delegate;
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     delegate.keyboardWasShown = YES;
     NSDictionary* info = [aNotification userInfo];
     CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;

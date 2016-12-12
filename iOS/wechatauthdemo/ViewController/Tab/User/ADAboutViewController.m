@@ -9,7 +9,8 @@
 #import <MessageUI/MFMailComposeViewController.h>
 
 static NSString* const kTitleText = @"关于我们";
-static NSString* const kAboutUsText = @"WeDemo为微信团队开源项目，用于微信开发者进行微信登录、分享功能开发时的参考Demo。微信开发者可以参考项目中的代码来开发应用，也可以直接使用项目中的代码到自己的App中。\n开发者可以自由使用并传播本代码。\n\n源代码下载地址：\n https://github.com/weixin-open/WeChatAuthDemo\n\n联系我们：\nopen@wechat.com";
+static NSString* const kAboutUsText = @"WeDemo为微信团队开源项目，用于微信开发者进行微信登录、分享功能开发时的参考Demo。微信开发者可以参考项目中的代码来开发应用，也可以直接使用项目中的代码到自己的App中。\n开发者可以自由使用并传播本代码。\n\n源代码下载地址：\n https://github.com/Tencent/WeDemo\n\n联系我们：\nopen@wechat.com";
+static NSString* const kSourceCodeAddress = @"https://github.com/Tencent/WeDemo";
 
 @interface ADAboutViewController ()<UITextViewDelegate>
 
@@ -60,8 +61,8 @@ static NSString* const kAboutUsText = @"WeDemo为微信团队开源项目，用�
                                                                                                                                   NSFontAttributeName: [UIFont fontWithName:kChineseFont size:17]
                                                                                                                                   }];
         [attributedString addAttribute:NSLinkAttributeName
-                                 value:@"https://github.com/weixin-open/WeChatAuthDemo"
-                                 range:[[attributedString string] rangeOfString:@"https://github.com/weixin-open/WeChatAuthDemo"]];
+                                 value:kSourceCodeAddress
+                                 range:[[attributedString string] rangeOfString:kSourceCodeAddress]];
         
         NSDataDetector* detector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeLink error:nil];
         NSArray* matchURL = [detector matchesInString:[attributedString string]

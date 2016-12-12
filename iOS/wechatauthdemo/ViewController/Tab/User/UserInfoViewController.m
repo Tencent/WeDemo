@@ -265,7 +265,7 @@ static const CGFloat kWXLoginButtonFontSize = 16.0f;
                                            WithCompletion:^(ADGetUserInfoResp *resp) {
                                                [ADUserInfo currentUser].nickname = resp.nickname;
                                                [ADUserInfo currentUser].headimgurl = resp.headimgurl;
-                                               AppDelegate *delegate = [UIApplication sharedApplication].delegate;
+                                               AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
                                                delegate.userInfoView.userInfoResp = resp;
                                                [[ADNetworkEngine sharedEngine] downloadImageForUrl:resp.headimgurl
                                                                                     WithCompletion:^(UIImage *image) {

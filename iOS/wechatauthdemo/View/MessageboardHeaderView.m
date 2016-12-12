@@ -8,8 +8,4 @@
 
 @implementation MessageboardHeaderView
 
-- (void)awakeFromNib {
-    // Initialization code
-}
-
 @end

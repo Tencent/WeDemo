@@ -18,6 +18,7 @@ static const CGFloat kTitleFontSize = 16.0f;
 
 - (void)awakeFromNib {
     // Initialization code
+    [super awakeFromNib];
     self.nameLabel.font = [UIFont fontWithName:kChineseFont
                                           size:kTitleFontSize];
     self.titleLabel.font = [UIFont fontWithName:kChineseFont

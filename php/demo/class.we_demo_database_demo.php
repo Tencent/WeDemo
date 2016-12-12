@@ -1,4 +1,4 @@
-<?php if (!defined('WX_AUTH_DEMO')) { die('Unauthorized Access!'); }
+<?php if (!defined('WE_DEMO')) { die('Unauthorized Access!'); }
 
 // Tencent is pleased to support the open source community by making WeDemo available.
 // Copyright (C) 2016 THL A29 Limited, a Tencent company. All rights reserved.
@@ -20,7 +20,7 @@
 /**
  * @version 2015-09-15
  */
-class WXAuthDatabaseDemo implements WXDatabase
+class WeDemoDatabaseDemo implements WXDatabase
 {
 
 	function __construct()
@@ -235,7 +235,7 @@ class WXAuthDatabaseDemo implements WXDatabase
 
 	public function is_available()
 	{
-		return is_writable(WX_AUTH_STORE_PATH);
+		return is_writable(WE_DEMO_STORE_PATH);
 	}
 
 	public function set_item($file, $key, $value)
@@ -274,13 +274,13 @@ class WXAuthDatabaseDemo implements WXDatabase
 	public function set($file, $data)
 	{
 		$data = json_encode($data);
-		file_put_contents(WX_AUTH_STORE_PATH . $file . '.json', $data);
+		file_put_contents(WE_DEMO_STORE_PATH . $file . '.json', $data);
 		return true;
 	}
 
 	public function get($file)
 	{
-		$data = file_get_contents(WX_AUTH_STORE_PATH . $file . '.json');
+		$data = file_get_contents(WE_DEMO_STORE_PATH . $file . '.json');
 		if ($data) {
 			$data = json_decode($data, true);
 			return $data;

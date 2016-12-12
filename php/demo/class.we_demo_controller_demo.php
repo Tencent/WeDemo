@@ -1,5 +1,5 @@
 
-<?php if (!defined('WX_AUTH_DEMO')) { die('Unauthorized Access!'); }
+<?php if (!defined('WE_DEMO')) { die('Unauthorized Access!'); }
 
 // Tencent is pleased to support the open source community by making WeDemo available.
 // Copyright (C) 2016 THL A29 Limited, a Tencent company. All rights reserved.
@@ -12,7 +12,7 @@
  * 授权登录控制器Demo
  * @version 2015-09-15
  */
-class WXAuthControllerDemo
+class WeDemoControllerDemo
 {
     protected $db;
     protected $sdk;
@@ -21,28 +21,28 @@ class WXAuthControllerDemo
     function __construct()
     {
         // 加载SDK
-        if (file_exists(WX_AUTH_SDK_PATH . 'class.wx_sdk_handler.php')) {
-            require_once WX_AUTH_SDK_PATH . 'class.wx_sdk_handler.php';
-            require_once WX_AUTH_SDK_PATH . 'class.wx_network.php';
-            require_once WX_AUTH_SDK_PATH . 'class.wx_open_api.php';
-            require_once WX_AUTH_SDK_PATH . 'interface.wx_database.php';
+        if (file_exists(WX_SDK_PATH . 'class.wx_sdk_handler.php')) {
+            require_once WX_SDK_PATH . 'class.wx_sdk_handler.php';
+            require_once WX_SDK_PATH . 'class.wx_network.php';
+            require_once WX_SDK_PATH . 'class.wx_open_api.php';
+            require_once WX_SDK_PATH . 'interface.wx_database.php';
         } else {
-            $this->show_server_error('WX Auth SDK does not exist.');
+            $this->show_server_error('WX SDK does not exist.');
         }
 
         // 数据存取
-        require_once __DIR__ . '/class.wx_auth_database_demo.php';
-        $this->db = new WXAuthDatabaseDemo();
+        require_once __DIR__ . '/class.we_demo_database_demo.php';
+        $this->db = new WeDemoDatabaseDemo();
         if (!$this->db->is_available()) {
             $this->show_server_error('Database is not available.');
         }
 
         // 初始化SDK
         $opt = array(
-            'app_id' => WX_APP_ID,
-            'app_secret' => WX_APP_SECRET,
-            'rsa_private_key' => WX_AUTH_RSA_PRIVATE_KEY,
-            'salt' => WX_AUTH_SALT,
+            'app_id' => WE_DEMO_APP_ID,
+            'app_secret' => WE_DEMO_APP_SECRET,
+            'rsa_private_key' => WE_DEMO_RSA_PRIVATE_KEY,
+            'salt' => WE_DEMO_SALT,
             'database' => $this->db,
             'delegate' => $this
         );
@@ -347,7 +347,7 @@ class WXAuthControllerDemo
         if (!is_string($str)) {
             $str = json_encode($str);
         }
-        $file = WX_AUTH_STORE_PATH.'/log.txt';
+        $file = WE_DEMO_STORE_PATH.'/log.txt';
         if (file_exists($file)) {
             file_put_contents($file, '');
         }

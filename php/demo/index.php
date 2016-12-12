@@ -6,13 +6,13 @@
 // http://opensource.org/licenses/MIT
 // Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" basis, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 
-define('WX_AUTH_DEMO', 1);
+define('WE_DEMO', 1);
 
 include_once 'config.php';
-include_once 'class.wx_auth_controller_demo.php';
+include_once 'class.we_demo_controller_demo.php';
 
 // here we go
-$controller = new WXAuthControllerDemo();
+$controller = new WeDemoControllerDemo();
 $controller->main();
 
 /* END file */

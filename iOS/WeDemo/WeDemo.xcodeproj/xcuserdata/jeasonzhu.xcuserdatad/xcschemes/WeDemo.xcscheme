@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "73BED5E61B3AA48600CA4C4D"
-               BuildableName = "wechatauthdemo.app"
-               BlueprintName = "wechatauthdemo"
-               ReferencedContainer = "container:wechatauthdemo.xcodeproj">
+               BuildableName = "WeDemo.app"
+               BlueprintName = "WeDemo"
+               ReferencedContainer = "container:WeDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "73BED5E61B3AA48600CA4C4D"
-            BuildableName = "wechatauthdemo.app"
-            BlueprintName = "wechatauthdemo"
-            ReferencedContainer = "container:wechatauthdemo.xcodeproj">
+            BuildableName = "WeDemo.app"
+            BlueprintName = "WeDemo"
+            ReferencedContainer = "container:WeDemo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "73BED5E61B3AA48600CA4C4D"
-            BuildableName = "wechatauthdemo.app"
-            BlueprintName = "wechatauthdemo"
-            ReferencedContainer = "container:wechatauthdemo.xcodeproj">
+            BuildableName = "WeDemo.app"
+            BlueprintName = "WeDemo"
+            ReferencedContainer = "container:WeDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "73BED5E61B3AA48600CA4C4D"
-            BuildableName = "wechatauthdemo.app"
-            BlueprintName = "wechatauthdemo"
-            ReferencedContainer = "container:wechatauthdemo.xcodeproj">
+            BuildableName = "WeDemo.app"
+            BlueprintName = "WeDemo"
+            ReferencedContainer = "container:WeDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

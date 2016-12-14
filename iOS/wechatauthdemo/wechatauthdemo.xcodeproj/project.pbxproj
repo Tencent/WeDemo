@@ -95,7 +95,7 @@
 		4ADE14298AD0AD62C5C4E13D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		735560791B45202D00B3EE93 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ../Localizable.strings; sourceTree = "<group>"; };
 		7363B3131B42963000D833A5 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWeChatSDK.a; path = WeChatSDK/libWeChatSDK.a; sourceTree = "<group>"; };
-		73BED5E71B3AA48600CA4C4D /* WeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		73BED5E71B3AA48600CA4C4D /* wechatauthdemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wechatauthdemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73BED6191B3AA77100CA4C4D /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXApi.h; path = WeChatSDK/WXApi.h; sourceTree = "<group>"; };
 		73BED61A1B3AA77100CA4C4D /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXApiObject.h; path = WeChatSDK/WXApiObject.h; sourceTree = "<group>"; };
 		73BED61C1B3AA82000CA4C4D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -294,7 +294,7 @@
 		73BED5E81B3AA48600CA4C4D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				73BED5E71B3AA48600CA4C4D /* WeDemo.app */,
+				73BED5E71B3AA48600CA4C4D /* wechatauthdemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -684,9 +684,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		73BED5E61B3AA48600CA4C4D /* WeDemo */ = {
+		73BED5E61B3AA48600CA4C4D /* wechatauthdemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 73BED60A1B3AA48600CA4C4D /* Build configuration list for PBXNativeTarget "WeDemo" */;
+			buildConfigurationList = 73BED60A1B3AA48600CA4C4D /* Build configuration list for PBXNativeTarget "wechatauthdemo" */;
 			buildPhases = (
 				186A11AB97A42A7640491420 /* Check Pods Manifest.lock */,
 				73BED5E31B3AA48600CA4C4D /* Sources */,
@@ -699,9 +699,9 @@
 			);
 			dependencies = (
 			);
-			name = WeDemo;
+			name = wechatauthdemo;
 			productName = wechatauthdemo;
-			productReference = 73BED5E71B3AA48600CA4C4D /* WeDemo.app */;
+			productReference = 73BED5E71B3AA48600CA4C4D /* wechatauthdemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -719,7 +719,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 73BED5E21B3AA48600CA4C4D /* Build configuration list for PBXProject "WeDemo" */;
+			buildConfigurationList = 73BED5E21B3AA48600CA4C4D /* Build configuration list for PBXProject "wechatauthdemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -732,7 +732,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				73BED5E61B3AA48600CA4C4D /* WeDemo */,
+				73BED5E61B3AA48600CA4C4D /* wechatauthdemo */,
 			);
 		};
 /* End PBXProject section */
@@ -1032,7 +1032,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		73BED5E21B3AA48600CA4C4D /* Build configuration list for PBXProject "WeDemo" */ = {
+		73BED5E21B3AA48600CA4C4D /* Build configuration list for PBXProject "wechatauthdemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				73BED6081B3AA48600CA4C4D /* Debug */,
@@ -1041,7 +1041,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		73BED60A1B3AA48600CA4C4D /* Build configuration list for PBXNativeTarget "WeDemo" */ = {
+		73BED60A1B3AA48600CA4C4D /* Build configuration list for PBXNativeTarget "wechatauthdemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				73BED60B1B3AA48600CA4C4D /* Debug */,

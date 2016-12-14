@@ -15,7 +15,7 @@
 	* [编写你自己的Engine]()
 
 ##概要
-WeDemo除了具有演示客户端，服务器如何安全的接入微信服务的作用，还提供了一套[安全的通信方式](https://github.com/Tencent/WeDemo/wiki/微信WeDemo交互时序说明文档)供开发者使用以快速搭建自己的App。本文为客户端接入指南，PHP端接入指南详见[WeDemo后台（PHP）接入指南](https://github.com/Tencent/WeDemo/wiki/WeDemo后台（PHP）接入指南)。
+WeDemo除了具有演示客户端，服务器如何安全的接入微信服务的作用，还提供了一套[安全的通信方式](https://github.com/Tencent/WeDemo/wiki/微信WeDemo交互时序说明文档)供开发者使用以快速搭建自己的App。本文为客户端接入指南，PHP端接入指南详见[WeChatAuthDemo后台（PHP）接入指南]()。
 
 ##获取源代码
 在Mac OS X上打开终端模拟器，输入以下命令：
@@ -34,11 +34,11 @@ git clone https://github.com/Tencent/WeDemo
 在终端模拟器中输入以下命令来打开工程所在目录:
 
 ```bash
-cd WeDemo/iOS/WeDemo
+cd WeDemo/iOS/wechatauthdemo
 open .
 ```
 
-在弹出的Finder窗口中打开工程文件```WeDemo.xcworkspace```。在工程树中找到并修改**Info.plist**中的App信息,如下图所示：
+在弹出的Finder窗口中打开工程文件```wechatauthdemo.xcworkspace```。在工程树中找到并修改**Info.plist**中的App信息,如下图所示：
 
 ![](https://raw.githubusercontent.com/weixin-open/WeChatAuthDemo/master/doc/image/WXAppInfo.jpg)
 
@@ -57,13 +57,13 @@ open .
 为了让你自己的服务器能成功接收到请求并做出响应，需要替换客户端中的服务器信息，具体步骤如下：
 
 ###替换服务器地址
-找到[BaseNetworkEngine.m](https://github.com/Tencent/WeDemo/blob/master/iOS/WeDemo/Service/BaseNetworkEngine.m)文件，修改defaultHost的值为你自己的服务器地址，如下图所示：
+找到[BaseNetworkEngine.m](https://github.com/weixin-open/WeChatAuthDemo/blob/master/iOS/wechatauthdemo/Service/BaseNetworkEngine.m)文件，修改defaultHost的值为你自己的服务器地址，如下图所示：
 
 ![](https://raw.githubusercontent.com/weixin-open/WeChatAuthDemo/master/doc/image/defaultHost.jpg)
 
 ###替换服务器RSA公钥和自签名SSL证书
 
-将服务器中用于与App通信的RSA公钥和SSL证书下载下来, 然后打开[BaseNetworkEngine.m](https://github.com/Tencent/WeDemo/blob/master/iOS/WeDemo/Service/BaseNetworkEngine.m)文件，将公钥内容复制替换掉，如下图所示：
+将服务器中用于与App通信的RSA公钥和SSL证书下载下来, 然后打开[BaseNetworkEngine.m](https://github.com/weixin-open/WeChatAuthDemo/blob/master/iOS/wechatauthdemo/Service/BaseNetworkEngine.m)文件，将公钥内容复制替换掉，如下图所示：
 
 ![](https://raw.githubusercontent.com/weixin-open/WeChatAuthDemo/master/doc/image/RSAPublicKey.jpg)
 
@@ -77,7 +77,7 @@ open .
 你可以在WeDemo的基础上添加你自己的功能，完成你的App。
 
 ###增加CGI配置
-按照[ConfigItemsMaker.h](https://github.com/Tencent/WeDemo/blob/master/iOS/WeDemo/Service/ConfigItemsMaker.h)的格式，增加你需要增加的CGI的配置信息，包括请求的路径，加解密算法等，参考示例如下(在[ConfigItemsMaker.h](https://github.com/Tencent/WeDemo/blob/master/iOS/WeDemo/Service/ConfigItemsMaker.h))：
+按照[ConfigItemsMaker.h](https://github.com/Tencent/WeDemo/blob/master/iOS/wechatauthdemo/Service/ConfigItemsMaker.h)的格式，增加你需要增加的CGI的配置信息，包括请求的路径，加解密算法等，参考示例如下(在[ConfigItemsMaker.h](https://github.com/Tencent/WeDemo/blob/master/iOS/wechatauthdemo/Service/ConfigItemsMaker.h))：
 
 ```objective-c
 @{
@@ -93,7 +93,7 @@ open .
 ```
 
 ###编写你自己的Engine
-之后只需要继承[BaseNetworkEngine](https://github.com/Tencent/WeDemo/blob/master/iOS/WeDemo/Service/BaseNetworkEngine.m)，然后用```JSONTaskForHost:Para:ConfigKeyPath:WithCompletion:```建立一个网络请求并发起即可，参考示例如下(在[ADNetworkEngine.m](https://github.com/Tencent/WeDemo/blob/master/iOS/WeDemo/Service/ADNetworkEngine.m)中):
+之后只需要继承[BaseNetworkEngine](https://github.com/Tencent/WeDemo/blob/master/iOS/wechatauthdemo/Service/BaseNetworkEngine.m)，然后用```JSONTaskForHost:Para:ConfigKeyPath:WithCompletion:```建立一个网络请求并发起即可，参考示例如下(在[ADNetworkEngine.m](https://github.com/Tencent/WeDemo/blob/master/iOS/wechatauthdemo/Service/ADNetworkEngine.m)中):
 
 ```objective-c
 - (void)getReplyListForUin:(UInt32)uin

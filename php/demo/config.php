@@ -30,14 +30,14 @@ define('WE_DEMO_RSA_PRIVATE_KEY', __DIR__ . '/_key/rsa_private.key');
 define('WE_DEMO_SALT', 'WeDemo');
 
 // 票据相关时间，单位为秒
-define('WE_DEMO_LOGIN_TOKEN_EXPIRE_CREATE_TIME', 60*60*24*30);
-define('WE_DEMO_LOGIN_TOKEN_EXPIRE_LAST_LOGIN_TIME', 60*60*24*7);
-define('WE_DEMO_SESSION_KEY_EXPIRE_TIME', 60*60);
+define('WX_LOGIN_TOKEN_EXPIRE_CREATE_TIME', 60*60*24*30);
+define('WX_LOGIN_TOKEN_EXPIRE_LAST_LOGIN_TIME', 60*60*24*7);
+define('WS_SESSION_KEY_EXPIRE_TIME', 60*60);
 
 // 第三方业务相关的错误码，可根据实际业务情况来定义
-define('WE_DEMO_ERR_INVALID_COMMENT_CONTENT',			-40001);	//留言内容不合法
-define('WE_DEMO_ERR_INVALID_REPLY_CONTENT',				-40002);	//回复内容不合法
-define('WE_DEMO_ERR_NO_COMMENT',							-40003);	//留言不存在
+define('WX_ERR_INVALID_COMMENT_CONTENT',			-40001);	//留言内容不合法
+define('WX_ERR_INVALID_REPLY_CONTENT',				-40002);	//回复内容不合法
+define('WX_ERR_NO_COMMENT',							-40003);	//留言不存在
 
 /* !!! 请配置以上信息 !!! */
 

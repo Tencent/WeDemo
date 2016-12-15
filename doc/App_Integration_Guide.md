@@ -15,7 +15,7 @@
 	* [编写你自己的Engine]()
 
 ##概要
-WeDemo除了具有演示客户端，服务器如何安全的接入微信服务的作用，还提供了一套[安全的通信方式](https://github.com/Tencent/WeDemo/wiki/微信WeDemo交互时序说明文档)供开发者使用以快速搭建自己的App。本文为客户端接入指南，PHP端接入指南详见[WeDemo后台（PHP）接入指南]()。
+WeDemo除了具有演示客户端，服务器如何安全的接入微信服务的作用，还提供了一套[安全的通信方式](https://github.com/Tencent/WeDemo/wiki/WeDemo-App交互时序说明文档)供开发者使用以快速搭建自己的App。本文为客户端接入指南，PHP端接入指南详见[WeDemo后台（PHP）接入指南](https://github.com/Tencent/WeDemo/wiki/WeDemo后台（PHP）接入指南)。
 
 ##获取源代码
 在Mac OS X上打开终端模拟器，输入以下命令：

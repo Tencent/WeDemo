@@ -26,7 +26,7 @@ AppServer->AppClient: 4. ConnectResponse: psk作为密钥的\nAES加密(temp_uin
 note left of AppClient: 5. AppClient用psk作为密钥的\nAES解密保存temp_uin
 -->
 
-![](https://raw.githubusercontent.com/weixin-open/WeChatAuthDemo/master/doc/image/connect.png)
+![](https://raw.githubusercontent.com/Tencent/WeDemo/master/doc/image/connect.png)
 
 <b>以下为详细说明:</b>
 
@@ -67,7 +67,7 @@ AppServer->AppClient: 7. WXLoginResponse: AES加密(loginTicket, Uin)
 note left of AppClient: 8. 用psk解密Uin，\nLoginTicket并保存。
 -->
 
-![](https://raw.githubusercontent.com/weixin-open/WeChatAuthDemo/master/doc/image/wxLogin.png)
+![](https://raw.githubusercontent.com/Tencent/WeDemo/master/doc/image/wxLogin.png)
 
 <b>以下为详细说明: </b>
 
@@ -104,7 +104,7 @@ AppServer->AppClient: 4. CheckLoginResponse: temp_key\n作为密钥的AES加密(
 note left of AppClient: 5. 用temp_key解密SK，\nexpireTime并保存。
 -->
 
-![](https://raw.githubusercontent.com/weixin-open/WeChatAuthDemo/master/doc/image/checkLogin.png)
+![](https://raw.githubusercontent.com/Tencent/WeDemo/master/doc/image/checkLogin.png)
 
 <b>以下为详细说明:</b>
 
@@ -140,7 +140,7 @@ AppServer->AppClient: 5. GetUserInfoResponse: SK\n作为密钥的AES加密(App�
 note left of AppClient: 6. 解密用户信息\n并保存显示。
 -->
 
-![](https://raw.githubusercontent.com/weixin-open/WeChatAuthDemo/master/doc/image/getUserInfo.png)
+![](https://raw.githubusercontent.com/Tencent/WeDemo/master/doc/image/getUserInfo.png)
 
 <b>以下为详细说明:</b>
 
@@ -182,7 +182,7 @@ note left of AppClient: 8. 更新SK和有效期\n重发请求
 AppClient->AppServer: 9. GetUserInfoRequest或\nwxBindAppRequest或\nappBindWXRequest
 -->
 
-![](https://raw.githubusercontent.com/weixin-open/WeChatAuthDemo/master/doc/image/SKExpired.png)
+![](https://raw.githubusercontent.com/Tencent/WeDemo/master/doc/image/SKExpired.png)
 
 <b>以下为详细说明：</b>
 
@@ -215,7 +215,7 @@ WXOpenServer->AppServer: 3. {New AccessToken ExpireTime}
 
 note left of AppServer: 4. 再次请求微信信息
 -->
-![](https://raw.githubusercontent.com/weixin-open/WeChatAuthDemo/master/doc/image/accessTokenExpired.png)
+![](https://raw.githubusercontent.com/Tencent/WeDemo/master/doc/image/accessTokenExpired.png)
 
 <b>以下为详细说明：</b>
 
@@ -244,7 +244,7 @@ note over AppClient, AppServer: 4. 重新进行利用微信SSO\n换取登录票�
 note left of AppClient: 5. 重新登录AppServer\n并获取用户信息
 -->
 
-![](https://raw.githubusercontent.com/weixin-open/WeChatAuthDemo/master/doc/image/refreshTokenExpired.png)
+![](https://raw.githubusercontent.com/Tencent/WeDemo/master/doc/image/refreshTokenExpired.png)
 
 <b>以下为详细说明：</b>
 

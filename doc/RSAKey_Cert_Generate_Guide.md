@@ -44,7 +44,7 @@ ST = GD
 L  = GZ 
 O  = Tencent
 OU = WXG
-CN = wechatauthdemo.com
+CN = wedemo.com
 
 [req_x509v3_extensions]
 basicConstraints = critical,CA:true
@@ -55,17 +55,17 @@ subjectAltName=@alt_names
 
 #将下面的信息替换成你的信息
 [alt_names]
-DNS.1 = *.wechatauthdemo.com
-DNS.2 = *.api.wechatauthdemo.com
-DNS.3 = wechatauthdemo.com
+DNS.1 = *.wedemo.com
+DNS.2 = *.api.wedemo.com
+DNS.3 = wedemo.com
 
 ">ca_cert.conf
 
 #将下面的信息替换成你的信息
-key_file=wechatauthdemo.com.key
-tmp_cert_file=tmp_wechatauthdemo.com.crt
-csr_file=wechatauthdemo.com.csr
-cert_file=wechatauthdemo.com.crt
+key_file=wedemo.com.key
+tmp_cert_file=tmp_wedemo.com.crt
+csr_file=wedemo.com.csr
+cert_file=wedemo.com.crt
 
 #openssl genrsa  -out $key_file 2048
 openssl ecparam  -out $key_file -name prime256v1 -genkey
@@ -81,7 +81,7 @@ exit
 openssl s_server    -cert  $cert_file -key $key_file -CAfile $cert_file -Verify 3 -accept 4430 -www  &
 pid=$$
 #将下面的信息替换成你的信息
-echo 'GET /HTTP/1.1'|openssl s_client -connect www.wechatauthdemo.com:4430 -cert $cert_file -key $key_file -CAfile $cert_file
+echo 'GET /HTTP/1.1'|openssl s_client -connect www.wedemo.com:4430 -cert $cert_file -key $key_file -CAfile $cert_file
 kill $$
 ```
 
@@ -97,12 +97,12 @@ kill $$
 
 server {
     listen       443;
-    server_name  wechatauthdemo.com;
+    server_name  wedemo.com;
 
     ssl                  on;
     # certs sent to the client in SERVER HELLO are concatenated in ssl_certificate
-    ssl_certificate /etc/nginx/conf.d/wechatauthdemo.com.crt;
-    ssl_certificate_key /etc/nginx/conf.d/wechatauthdemo.com.key;
+    ssl_certificate /etc/nginx/conf.d/wedemo.com.crt;
+    ssl_certificate_key /etc/nginx/conf.d/wedemo.com.key;
     ssl_session_timeout 1d;
     ssl_session_cache shared:SSL:50m;
     ssl_session_tickets on;

@@ -1,15 +1,15 @@
 <h1 align=center>WeDemo App交互时序说明文档</center></h1>
 
 ##目录
-*   [一、建立登录前安全信道](#wow1)
-*   [二、换取登录票据](#wow2)
-	*   [利用微信SSO换取登录票据](#wow3)
-*   [三、使用登录票据登录并建立正式安全信道](#wow4)
-*   [四、获得用户信息](#wow5)
-*   [五、App登录态/SK过期](#wow6)
-*   [六、微信登录的Token过期](#wow7)
-    *   [Access Token过期](#wow8)
-    *   [Refresh Token过期](#wow9)
+*   [一、建立登录前安全信道](#user-content-一建立登录前安全信道)
+*   [二、换取登录票据](#user-content-二换取登录票据)
+	*   [利用微信SSO换取登录票据](#user-content-利用微信sso换取登录票据)
+*   [三、使用登录票据登录并建立正式安全信道](#user-content-三使用登录票据登录并建立正式安全信道)
+*   [四、获得用户信息](#user-content-四获得用户信息)
+*   [五、App登录态/SK过期](#user-content-五app登录态sk过期)
+*   [六、微信登录的Token过期](#user-content-六微信登录的token过期)
+    *   [Access Token过期](#user-content-access-token过期)
+    *   [Refresh Token过期](#user-content-refresh-token过期)
     
 <h2 id="wow1">一、建立登录前安全信道</h2>
 
@@ -26,7 +26,7 @@ AppServer->AppClient: 4. ConnectResponse: psk作为密钥的\nAES加密(temp_uin
 note left of AppClient: 5. AppClient用psk作为密钥的\nAES解密保存temp_uin
 -->
 
-![](https://raw.githubusercontent.com/Tencent/WeDemo/master/doc/image/connect.png)
+![](https://raw.githubusercontent.com/weixin-open/WeChatAuthDemo/master/doc/image/connect.png)
 
 <b>以下为详细说明:</b>
 
@@ -40,13 +40,13 @@ note left of AppClient: 5. AppClient用psk作为密钥的\nAES解密保存temp_u
 
 5. AppClient对回包进行Base64 Decode之后，验证MAC一致后用psk作为密钥进行AES解密获得temp_uin保存到内存中.
 
-<b>至此AppClient和AppServer之间的登录前安全信道建立完成，之后一直至[使用登录票据登录AppServer](#wow6)之前，AppClient和AppServer都使用psk作为密钥加密报文，并把密文＋HMac-SHA256的MAC进行Base64Encode，并带上temp_uin一并发送出去。</b>
+<b>至此AppClient和AppServer之间的登录前安全信道建立完成，之后一直至[使用登录票据登录AppServer](#user-content-三使用登录票据登录并建立正式安全信道)之前，AppClient和AppServer都使用psk作为密钥加密报文，并把密文＋HMac-SHA256的MAC进行Base64Encode，并带上temp_uin一并发送出去。</b>
 
 <h2 id="wow2">二、换取登录票据</h2>
 
-<h3 id="wow3"> 利用微信SSO换取登录票据</h3>
+<h3 id="wow3">利用微信SSO换取登录票据</h3>
 
-<b>当用户点击“微信登录”按钮时，会触发利用微信SSO换取登录票据事件，此部分需在[登录前安全信道](#wow1)中进行，时序图如下所示：</b>
+<b>当用户点击“微信登录”按钮时，会触发利用微信SSO换取登录票据事件，此部分需在[登录前安全信道](#user-content-一建立登录前安全信道)中进行，时序图如下所示：</b>
 
 <!--title 利用微信SSO换取登录票据
 
@@ -67,7 +67,7 @@ AppServer->AppClient: 7. WXLoginResponse: AES加密(loginTicket, Uin)
 note left of AppClient: 8. 用psk解密Uin，\nLoginTicket并保存。
 -->
 
-![](https://raw.githubusercontent.com/Tencent/WeDemo/master/doc/image/wxLogin.png)
+![](https://raw.githubusercontent.com/weixin-open/WeChatAuthDemo/master/doc/image/wxLogin.png)
 
 <b>以下为详细说明: </b>
 
@@ -104,7 +104,7 @@ AppServer->AppClient: 4. CheckLoginResponse: temp_key\n作为密钥的AES加密(
 note left of AppClient: 5. 用temp_key解密SK，\nexpireTime并保存。
 -->
 
-![](https://raw.githubusercontent.com/Tencent/WeDemo/master/doc/image/checkLogin.png)
+![](https://raw.githubusercontent.com/weixin-open/WeChatAuthDemo/master/doc/image/checkLogin.png)
 
 <b>以下为详细说明:</b>
 
@@ -122,7 +122,7 @@ note left of AppClient: 5. 用temp_key解密SK，\nexpireTime并保存。
 
 <h2 id="wow5">四、获得用户信息</h2>
 
-<b>当AppClient获得SK和expireTime时，会触发获得用户信息事件，此部分需在[正式安全信道](#wow6)中进行，时序图如下所示 ：</b>
+<b>当AppClient获得SK和expireTime时，会触发获得用户信息事件，此部分需在[正式安全信道](#user-content-三使用登录票据登录并建立正式安全信道)中进行，时序图如下所示 ：</b>
 
 <!--title 获得用户信息
 
@@ -140,17 +140,17 @@ AppServer->AppClient: 5. GetUserInfoResponse: SK\n作为密钥的AES加密(App�
 note left of AppClient: 6. 解密用户信息\n并保存显示。
 -->
 
-![](https://raw.githubusercontent.com/Tencent/WeDemo/master/doc/image/getUserInfo.png)
+![](https://raw.githubusercontent.com/weixin-open/WeChatAuthDemo/master/doc/image/getUserInfo.png)
 
 <b>以下为详细说明:</b>
 
 1. AppClient用SK对｛Uin，LoginTicket｝加密，将密文末尾加上HMac-SHA256的MAC后，进行Base64 Encoding与Uin(明文)一同发给AppServer。
 
-2. AppServer通过明文获得Uin并索引到SK，若SK已过期，则触发[App登录态/SK过期](#wow12)子事件, 否则验证MAC一致并解密获得LoginTicket。之后查询Uin和LoginTicket是否匹配，若成功，则根据Uin查询获得用户OpenId等用户信息。
+2. AppServer通过明文获得Uin并索引到SK，若SK已过期，则触发[App登录态/SK过期](#user-content-五app登录态sk过期)子事件, 否则验证MAC一致并解密获得LoginTicket。之后查询Uin和LoginTicket是否匹配，若成功，则根据Uin查询获得用户OpenId等用户信息。
 
 3. AppServer利用OpenId和AccessToken向WXOpenServer查询用户的微信信息。<font color=red size=4>注意，这里AccessToken和RefreshToken只能存在于AppServer中，不能让AppClient直接请求微信用户信息。</font>
 	
-4. 若AccessToken未过期，WXOpenServer返回对应的微信用户信息，包括微信昵称，头像Url等，若已过期，则触发[微信登录的Token过期](#wow13)子事件。
+4. 若AccessToken未过期，WXOpenServer返回对应的微信用户信息，包括微信昵称，头像Url等，若已过期，则触发[微信登录的Token过期](#user-content-六微信登录的token过期)子事件。
 
 5. AppServer用SK对用户信息（包括昵称，头像，OpenId，AccessToken有效期，Refresh Token有效期）进行AES加密，在末尾加上HMac-SHA256的MAC后经过Base64Encoding发送给AppClient。
 
@@ -159,7 +159,7 @@ note left of AppClient: 6. 解密用户信息\n并保存显示。
 
 <h2 id="wow6">五、App登录态/SK过期</h2>
 
-<b>当AppServer在[获得用户信息](#wow7)子事件中发现SK过期时，会触发App登录态/SK过期事件。此部分只需要执行之前的子事件即可，是否为安全通道由具体子事件决定，时序图如下：</b>
+<b>当AppServer在[获得用户信息](#user-content-六微信登录的token过期)子事件中发现SK过期时，会触发App登录态/SK过期事件。此部分只需要执行之前的子事件即可，是否为安全通道由具体子事件决定，时序图如下：</b>
 
 <!--title App登录态/SK过期
 
@@ -182,7 +182,7 @@ note left of AppClient: 8. 更新SK和有效期\n重发请求
 AppClient->AppServer: 9. GetUserInfoRequest或\nwxBindAppRequest或\nappBindWXRequest
 -->
 
-![](https://raw.githubusercontent.com/Tencent/WeDemo/master/doc/image/SKExpired.png)
+![](https://raw.githubusercontent.com/weixin-open/WeChatAuthDemo/master/doc/image/SKExpired.png)
 
 <b>以下为详细说明：</b>
 
@@ -192,14 +192,14 @@ AppClient->AppServer: 9. GetUserInfoRequest或\nwxBindAppRequest或\nappBindWXRe
 
 3. AppServer返回一个错误码标识SK已经过期。
 
-4. AppClient收到错误码后重新执行[使用登录票据登录并建立正式安全信道](#wow6)子事件.
+4. AppClient收到错误码后重新执行[使用登录票据登录并建立正式安全信道](#user-content-五app登录态sk过期)子事件.
 
 5. AppClient重新发起GetUserInfoRequest或wxBindAppRequest或appBindWXRequest请求.
 
 
 <h2 id="wow13">六、微信登录的Token过期</h2>
 
-<b>当AppServer在[获得用户信息](#wow7)子事件中通过OpenId和AccessToken向WXOpenServer请求微信信息时，发现AccessToken过期，会触发微信登录的Token过期事件。此部分分为AccessToken过期和RefreshToken过期两种情况。以下为分别描述：</b>
+<b>当AppServer在[获得用户信息](#user-content-四获得用户信息)子事件中通过OpenId和AccessToken向WXOpenServer请求微信信息时，发现AccessToken过期，会触发微信登录的Token过期事件。此部分分为AccessToken过期和RefreshToken过期两种情况。以下为分别描述：</b>
 
 <h3 id="wow14">Access Token过期</h3>
 
@@ -215,7 +215,7 @@ WXOpenServer->AppServer: 3. {New AccessToken ExpireTime}
 
 note left of AppServer: 4. 再次请求微信信息
 -->
-![](https://raw.githubusercontent.com/Tencent/WeDemo/master/doc/image/accessTokenExpired.png)
+![](https://raw.githubusercontent.com/weixin-open/WeChatAuthDemo/master/doc/image/accessTokenExpired.png)
 
 <b>以下为详细说明：</b>
 
@@ -223,13 +223,13 @@ note left of AppServer: 4. 再次请求微信信息
 
 2. AppServer向WXOpenServer发起刷新AccessToken请求，请求里带上AppId和RefreshToken。<font color=red size=4>注意，这里AccessToken和RefreshToken只能存在于AppServer中，不能让AppClient直接刷新AccessToken。</font>
 
-3. WXOpenServer将新的AccessToken过期时间返回给AppServer。
+3. WXOpenServer将新的AccessToken及其过期时间返回给AppServer。
 
-4. AppServer刷新AccessToken的有效期并再次请求用户的微信信息.
+4. AppServer刷新AccessToken，并更新有效期并再次请求用户的微信信息.
 
 <h3 id="wow15">Refresh Token过期</h3>
 
-<b>若AppServer在刷新AccessToken的过程中发现RefreshToken过期，则需要让AppClient重新进行微信授权以获得新的RefreshToken。此部分需在[正式安全信道](#wow6)中进行，时序图为:</b>
+<b>若AppServer在刷新AccessToken的过程中发现RefreshToken过期，则需要让AppClient重新进行微信授权以获得新的RefreshToken。此部分需在[正式安全信道](#user-content-三使用登录票据登录并建立正式安全信道)中进行，时序图为:</b>
 
 <!--title Refresh Token过期
 
@@ -244,7 +244,7 @@ note over AppClient, AppServer: 4. 重新进行利用微信SSO\n换取登录票�
 note left of AppClient: 5. 重新登录AppServer\n并获取用户信息
 -->
 
-![](https://raw.githubusercontent.com/Tencent/WeDemo/master/doc/image/refreshTokenExpired.png)
+![](https://raw.githubusercontent.com/weixin-open/WeChatAuthDemo/master/doc/image/refreshTokenExpired.png)
 
 <b>以下为详细说明：</b>
 
@@ -254,6 +254,6 @@ note left of AppClient: 5. 重新登录AppServer\n并获取用户信息
 
 3. AppServer给AppServer返回一个错误码标识Refresh Token过期了。
 
-4. AppClient收到错误码后重新触发[利用微信SSO换取登录票据](#wow2)子事件。
+4. AppClient收到错误码后重新触发[利用微信SSO换取登录票据](#user-content-利用微信sso换取登录票据)子事件。
 
-5. AppClient重新触发[使用登录票据登录并建立正式安全信道](#wow6)子事件并重新[获取用户信息](#wow7)。
+5. AppClient重新触发[使用登录票据登录并建立正式安全信道](#user-content-三使用登录票据登录并建立正式安全信道)子事件并重新[获取用户信息](#user-content-四获得用户信息)。

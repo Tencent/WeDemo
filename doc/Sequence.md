@@ -159,7 +159,7 @@ note left of AppClient: 6. 解密用户信息\n并保存显示。
 
 <h2 id="wow6">五、App登录态/SK过期</h2>
 
-<b>当AppServer在[获得用户信息](#user-content-六微信登录的token过期)子事件中发现SK过期时，会触发App登录态/SK过期事件。此部分只需要执行之前的子事件即可，是否为安全通道由具体子事件决定，时序图如下：</b>
+<b>当AppServer在[获得用户信息](#user-content-四获得用户信息)子事件中发现SK过期时，会触发App登录态/SK过期事件。此部分只需要执行之前的子事件即可，是否为安全通道由具体子事件决定，时序图如下：</b>
 
 <!--title App登录态/SK过期
 
@@ -192,7 +192,7 @@ AppClient->AppServer: 9. GetUserInfoRequest或\nwxBindAppRequest或\nappBindWXRe
 
 3. AppServer返回一个错误码标识SK已经过期。
 
-4. AppClient收到错误码后重新执行[使用登录票据登录并建立正式安全信道](#user-content-五app登录态sk过期)子事件.
+4. AppClient收到错误码后重新执行[使用登录票据登录并建立正式安全信道](#user-content-三使用登录票据登录并建立正式安全信道)子事件.
 
 5. AppClient重新发起GetUserInfoRequest或wxBindAppRequest或appBindWXRequest请求.
 

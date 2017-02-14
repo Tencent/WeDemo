@@ -1,3 +1,4 @@
 platform :ios, '7.0'
-
-pod 'AFNetworking'
+target 'WeDemo' do
+  pod 'AFNetworking'
+end

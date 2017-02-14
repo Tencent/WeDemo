@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0810"
+   LastUpgradeVersion = "0820"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "73BED5E61B3AA48600CA4C4D"
+               BlueprintIdentifier = "1085451C1E52F3EA008FFE2F"
                BuildableName = "WeDemo.app"
                BlueprintName = "WeDemo"
                ReferencedContainer = "container:WeDemo.xcodeproj">
@@ -28,11 +28,31 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "108545351E52F3EA008FFE2F"
+               BuildableName = "WeDemoTests.xctest"
+               BlueprintName = "WeDemoTests"
+               ReferencedContainer = "container:WeDemo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "108545401E52F3EA008FFE2F"
+               BuildableName = "WeDemoUITests.xctest"
+               BlueprintName = "WeDemoUITests"
+               ReferencedContainer = "container:WeDemo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "73BED5E61B3AA48600CA4C4D"
+            BlueprintIdentifier = "1085451C1E52F3EA008FFE2F"
             BuildableName = "WeDemo.app"
             BlueprintName = "WeDemo"
             ReferencedContainer = "container:WeDemo.xcodeproj">
@@ -55,7 +75,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "73BED5E61B3AA48600CA4C4D"
+            BlueprintIdentifier = "1085451C1E52F3EA008FFE2F"
             BuildableName = "WeDemo.app"
             BlueprintName = "WeDemo"
             ReferencedContainer = "container:WeDemo.xcodeproj">
@@ -74,7 +94,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "73BED5E61B3AA48600CA4C4D"
+            BlueprintIdentifier = "1085451C1E52F3EA008FFE2F"
             BuildableName = "WeDemo.app"
             BlueprintName = "WeDemo"
             ReferencedContainer = "container:WeDemo.xcodeproj">
